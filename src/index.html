@@ -8,9 +8,9 @@
     <div class="minApp">
       <div class="topBar">
         <div class="titleBar">
-          <div class="toggleBtns">   
-            <button id="showHideMenus" class="toggleButton">
-              ≡
+          <div id="pincipalBtns" class="toggleBtns">   
+            <button id="showHideMenus" class="toggleButton" >
+              <p face ='Segoe UI, Tahoma, Geneva, Verdana, sans-serif'   >≡</p> 
             </button>
             <button id="Archivos" class="toggleArchivo" > 
               Archivos
@@ -36,7 +36,22 @@
             <button id="Sunat" class="toggleSunat" > 
               Sunat
             </button>
-          </div>  
+          </div>
+          <script>
+              
+            const contenedor = document.getElementById("pincipalBtns")
+            const menu = document.getElementById("showHideMenus")  
+
+            menu.style.display = "none";  
+            window.addEventListener('resize',()=>{
+              if(window.innerWidth >= 960){
+              contenedor.innerHTML='<button id="Archivos" class="toggleArchivo" > Archivos</button><button id="Comprobantes" class="toggleComprobantes" > Comprobantes</button><button id="Consolidacion" class="toggleConsolidacion" > Consolidacion</button><button id="Reportes" class="toggleReportes" > Reportes</button><button id="Analisis" class="toggleAnalisis" > Analisis cuenta</button><button id="Presupuesto" class="togglePresupuesto" > Presupuesto</button><button id="ConsolidacionB" class="toggleConsolidacionB" > ConsolidacionB</button><button id="Sunat" class="toggleSunat" > Sunat</button>'
+            }else{
+              contenedor.innerHTML = '<button id="showHideMenus" class="toggleButton">≡</button>';
+            }
+            })
+            
+          </script>
             <div class="title">
             CONTAB
             </div>  

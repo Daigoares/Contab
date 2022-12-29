@@ -36,35 +36,10 @@
             <button id="Sunat" class="toggleSunat" > 
               Sunat
             </button>
+            <button id="Ajustes" class="toggleAjustes">  </button>
           </div>
           <script>
-             const myBar = document.getElementById('mySidebar') 
-            const contenedor = document.getElementById("pincipalBtns")
-            const menu = document.getElementById("showHideMenus")  
-            const barra = document.getElementById("mySidebar")
-            const botonMenu = document.getElementById('showHideMenus');
-            menu.style.display = "none";
             
-
-            window.addEventListener('resize',()=>{
-              if(window.innerWidth >= 960){
-              contenedor.innerHTML='<button id="Archivos" class="toggleArchivo" > Archivos</button><button id="Comprobantes" class="toggleComprobantes" > Comprobantes</button><button id="Consolidacion" class="toggleConsolidacion" > Consolidacion</button><button id="Reportes" class="toggleReportes" > Reportes</button><button id="Analisis" class="toggleAnalisis" > Analisis cuenta</button><button id="Presupuesto" class="togglePresupuesto" > Presupuesto</button><button id="ConsolidacionB" class="toggleConsolidacionB" > ConsolidacionB</button><button id="Sunat" class="toggleSunat" > Sunat</button>'
-            }else{
-              contenedor.innerHTML = '<button id="showHideMenus" class="toggleButton"class="leftMenu">≡</button>';
-            }
-            })
-            const isMenuActive = true 
-            botonMenu.addEventListener('click', ()=>{
-            if(isMenuActive){
-              console.log(1)
-              myBar.style.width= '0px';
-                isMenuActive = false;
-            }else{
-                console.log(2)
-                myBar.style.width = '200px';
-                isMenuActive = true;
-                }
-            })
           </script>
             <div class="title">
             CONTAB
